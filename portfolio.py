@@ -137,14 +137,31 @@ fig_choro = px.choropleth_mapbox(
 )
 
 # ------------------------------------------------------------------------------
-# Streamlit App
+# Streamlit App Layout
 # ------------------------------------------------------------------------------
-st.set_page_config(page_title="Pittsburgh Crime Dashboard", layout="wide")
+st.set_page_config(page_title="Wonkyung Portfolio", layout="wide")
 
-st.title("Pittsburgh Crime Risk Dashboard (CMU Student Focus)")
+# Intro Section
+st.title("Lisa Chung")
+st.subheader("Future Data Scientist & Leader")
 
-st.markdown("### Hourly Risks in CMU Neighborhoods")
+st.markdown("""
+Welcome! This is a collection of my projects in data analysis, visualization, and machine learning as a master's student at CMU.
+""")
+
+# Projects Section
+st.header("📊 Projects")
+st.markdown("- **Pittsburgh Crime Dashboard**: Interactive analysis of crime risks around CMU neighborhoods")
 st.plotly_chart(fig_scatter, use_container_width=True)
-
-st.markdown("### High-Threat Crime Density by Neighborhood")
 st.plotly_chart(fig_choro, use_container_width=True)
+
+st.markdown("- (More projects coming soon!)")
+
+# Contact Section
+st.header("📬 Contact")
+st.markdown("""
+Feel free to reach out via  
+- [GitHub](https://https://github.com/lisawkchung)  
+- [LinkedIn](https://www.linkedin.com/in/lisawonkyungchung/)  
+- [Email](mailto:lisa.wk.chung@gmail.com)  
+""")
